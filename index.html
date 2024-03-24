@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="index.js"></script>
+    <script src="/js/jquery-1.12.4.js"></script>
+    <script src="/js/index.js"></script>
     <link rel="stylesheet" href="style.css" />
-    <title>Login - 01</title>
+    <title>Login01</title>
   </head>
   <body>
     <div class="container">
@@ -16,63 +15,55 @@
           <a href="#none"><img src="/images/logo-coupang.png" /></a>
         </h1>
       </header>
-
-      <section>
-        <ul class="login-tab">
-          <li data-alt="email-tab" class="active">이메일 로그인</li>
-          <li data-alt="phone-tab"><span>휴대폰번호 로그인</span></li>
-          <li data-alt="qr-tab">QR코드 로그인</li>
-        </ul>
-
-        <div class="container-inner">
-          <!-- 이메일 로그인 part -->
+      <main>
+        <nav>
+          <ul class="login-tab">
+            <li data-alt="email-tab" class="active">이메일 로그인</li>
+            <li data-alt="phone-tab"><span>휴대폰번호 로그인</span></li>
+            <li data-alt="qr-tab">QR코드 로그인</li>
+          </ul>
+        </nav>
+        <section class="container-inner">
+          <!-- Email Login -->
           <div id="email-tab" class="tab login-email active">
             <div class="login-email-info">
-              <div>
+              <div class="email">
                 <input type="email" placeholder="아이디(이메일)" />
                 <p>아이디(이메일)를 입력해주세요.</p>
               </div>
-              <div>
+              <div class="password">
                 <input type="password" placeholder="비밀번호" />
                 <p>비밀번호를 입력해주세요.</p>
               </div>
             </div>
-
             <div class="login-email-content">
               <label for="auto">
                 <input type="checkbox" id="auto" /><span>자동 로그인</span>
               </label>
-              <!-- TODO a태그 안에 아이콘 넣을지 가상으로 넣을지 고민 -->
               <a href="#none"
                 >아이디 비밀번호 찾기<i class="xi-angle-right-min"></i
               ></a>
             </div>
-
             <div class="login-btn">
               <button>로그인</button>
-              <!-- TODO hr 고민 -->
               <hr />
               <a href="#none">회원가입</a>
             </div>
           </div>
-
-          <!-- 휴대폰번호 로그인 part -->
+          <!-- Phone Login -->
           <div id="phone-tab" class="tab login-phone">
             <p>쿠팡 계정에 등록된 휴대폰번호를 입력해주세요.</p>
             <div class="login-phone-info">
               <input type="tel" placeholder="휴대폰번호" />
               <p>휴대폰번호를 입력해주세요.</p>
             </div>
-
             <div class="login-btn">
               <button>인증번호 발송</button>
-              <!-- TODO hr 고민 -->
               <hr />
               <a href="#none">회원가입</a>
             </div>
           </div>
-
-          <!-- QR 로그인 part -->
+          <!-- QR Login -->
           <div id="qr-tab" class="tab login-qr">
             <div class="login-qr-info">
               <div class="login-qr-content-left">
@@ -91,26 +82,20 @@
                 <div><span>남은시간</span></div>
               </div>
             </div>
-
             <div class="login-btn">
-              <!-- TODO hr 고민 -->
               <hr />
               <a href="#none">회원가입</a>
             </div>
           </div>
-        </div>
-
-        <div class="login-biz">
+        </section>
+        <section class="login-biz">
           <p>
             법인 고객이신가요? <br />사업자 회원으로 전용 특가 혜택을
             누려보세요.
           </p>
-
-          <!-- TODO a태그 안에 아이콘 넣을지 가상으로 넣을지 고민 -->
           <a href="#none">쿠팡비즈 간편가입<i class="xi-angle-right"></i></a>
-        </div>
-      </section>
-
+        </section>
+      </main>
       <footer>
         <div class="footer">©Coupang Corp. All rights reserved.</div>
       </footer>

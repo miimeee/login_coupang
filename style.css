@@ -23,6 +23,7 @@ i {
   width: 460px;
   margin: auto;
 }
+/* Header */
 .container header h1 {
   text-align: center;
   margin-top: 50px;
@@ -30,6 +31,7 @@ i {
 .container header h1 a img {
   width: 200px;
 }
+/* Main - nav */
 .login-tab {
   display: flex;
   border-bottom: 2px solid #dddddd;
@@ -48,7 +50,7 @@ i {
   color: #346aff;
   font-weight: 700;
 }
-
+/* Main - 전체적인 레이아웃 */
 .container-inner {
   position: relative;
 }
@@ -66,8 +68,7 @@ i {
   opacity: 1;
   visibility: visible;
 }
-
-/* 이메일 로그인 디자인 */
+/* Main - Email Login */
 .login-email {
   text-align: center;
   position: relative;
@@ -94,11 +95,11 @@ i {
   padding-top: 10px;
   box-sizing: border-box;
 }
-.login-email-info div:nth-child(1):before {
+.email:before {
   content: "\ea07";
   font-family: xeicon;
 }
-.login-email-info div:nth-child(2)::before {
+.password::before {
   content: "\e966";
   font-family: xeicon;
 }
@@ -112,11 +113,11 @@ i {
   margin-top: 10px;
   cursor: pointer;
 }
-.login-email-info div:nth-child(1)::after {
+.email::after {
   content: "\e924";
   font-family: xeicon;
 }
-.login-email-info div:nth-child(2)::after {
+.password::after {
   content: "\e951";
   font-family: xeicon;
 }
@@ -129,28 +130,35 @@ i {
   padding-left: 60px;
   transition: 0.2s;
 }
+.password{
+  margin-top: 5px;
+}
 .login-email-info div input::placeholder {
   color: #bbbbbb;
+  transition: 0.3s;
 }
-.login-email-info div input:focus{
+.login-email-info div input:focus {
   border-bottom: 2px solid #346aff;
 }
 .login-email-info div p {
   font-size: 12px;
   color: #e52528;
   float: left;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   padding-left: 10px;
+  display: none;
+  transition: 0.3s;
 }
-.login-email-info div:nth-child(1) p {
-  margin-bottom: 15px;
+.login-email-info div input:focus + p{
+  display: block;
+}
+.login-email-info div input:focus::placeholder{
+  opacity: 0;
 }
 .login-email-content {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
-}
-.login-email-content label {
 }
 .login-email-content label input[type="checkbox"] {
   height: 20px;
@@ -161,37 +169,7 @@ i {
 .login-email-content a {
   color: #0073e9;
 }
-
-/* 버튼 디자인 */
-.login-btn {
-  margin-top: 10px;
-}
-.login-btn button {
-  background-color: #346aff;
-  color: #fff;
-  width: 100%;
-  height: 45px;
-  border-radius: 5px;
-  border: none;
-  font-size: 16px;
-}
-.login-btn hr {
-  border: 1px solid #dddddd;
-}
-.login-btn a {
-  display: inline-block;
-  width: 100%;
-  height: 45px;
-  line-height: 45px;
-  border: 1px solid #919eab;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 16px;
-}
-.login-btn a:hover {
-  font-weight: 700;
-}
-/* 번호 로그인 디자인 */
+/* Main - Phone Login */
 .login-phone p {
   font-size: 14px;
   color: #454f5b;
@@ -227,10 +205,10 @@ i {
   padding-left: 60px;
   transition: 0.2s;
 }
-.login-phone-info input[type="tel"]::placeholder{
+.login-phone-info input[type="tel"]::placeholder {
   color: #bbbbbb;
 }
-.login-phone-info input[type="tel"]:focus{
+.login-phone-info input[type="tel"]:focus {
   border: 1px solid #346aff;
   box-shadow: 0 0 5px #346aff65;
 }
@@ -241,8 +219,7 @@ i {
   margin-bottom: 0;
   padding-left: 10px;
 }
-
-/* QR로그인 디자인 */
+/* Main - QR Login */
 .login-qr-info {
   display: flex;
   justify-content: space-between;
@@ -287,15 +264,41 @@ i {
   flex: 1;
   text-align: center;
 }
-.login-qr-content-right div:nth-child(1){}
 .login-qr-content-right div:nth-child(1) canvas {
   border: 1px solid #000;
   width: 150px;
   height: 150px;
 }
-.login-qr-content-right div:nth-child(2){}
-
-/* 사업자 회원 */
+/* Button */
+.login-btn {
+  margin-top: 10px;
+}
+.login-btn button {
+  background-color: #346aff;
+  color: #fff;
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+.login-btn hr {
+  border: 1px solid #dddddd;
+}
+.login-btn a {
+  display: inline-block;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  border: 1px solid #919eab;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+}
+.login-btn a:hover {
+  font-weight: 700;
+}
+/* Main - Biz */
 .login-biz {
   text-align: center;
   margin: 30px 0 20px;
@@ -309,7 +312,7 @@ i {
   font-size: 14px;
   color: #454f5b;
 }
-/* 카피라이터 */
+/* Footer */
 .footer {
   text-align: center;
   padding: 20px 0 40px;
